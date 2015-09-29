@@ -71,8 +71,8 @@ long HX711::read_average(byte times) {
 }
 
 double HX711::get_value(byte times) {
-    return read_average(times) - 8407424; //Elisha wrote this. 8404048 or 0
-//  return read_average(times) - OFFSET;
+ //   return read_average(times) - 8407424; //Elisha wrote this. 8404048 or 0
+  return read_average(times) - OFFSET;
 }
 
 float HX711::get_units(byte times) {
